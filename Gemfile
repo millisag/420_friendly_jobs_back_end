@@ -1,7 +1,9 @@
 source "https://rubygems.org"
 
 ruby "3.2.0"
-
+gem 'devise' #User authentication
+gem 'figaro'  #Keeps API keys secure
+gem 'pundit' #Authorization
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
@@ -38,6 +40,9 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
